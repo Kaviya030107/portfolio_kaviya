@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kaviya — Portfolio</title>
+<meta name="description" content="Portfolio of Kaviya — CS undergrad, computer vision & full-stack projects." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ambient depth gradient backdrop -->
+<div class="depth-field" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">Kaviya N<span class="brand-dot">.</span></a>
+    <nav class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#papers">Papers</a>
+      <a href="#certificates">Certificates</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">// undergraduate &nbsp;·&nbsp; computer vision &amp; web dev</p>
+        <h1 class="hero-name">Kaviya N</h1>
+        <h2 class="hero-role">Computer Vision &amp; Full‑Stack Developer</h2>
+        <p class="hero-desc">
+          I build systems that make sense of images, from underwater detection
+          pipelines to campus-scale web apps. Currently interning on an
+          AI-based fish detection &amp; population estimation project.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">
+            View Resume
+          </a>
+          <a class="btn btn-ghost" href="#projects">See Work ↓</a>
+        </div>
+      </div>
+
+      <div class="hero-portrait">
+        <div class="portrait-frame">
+          <img src="profile.jpeg" alt="Portrait of Kaviya" />
+        </div>
+        <div class="portrait-tag">open to work</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="section wrap">
+    <div class="section-head">
+      <p class="eyebrow">01 &nbsp;·&nbsp; experience</p>
+      <h2>Where I've worked</h2>
+    </div>
+
+    <div class="timeline">
+
+      <article class="tl-item">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <div class="tl-top">
+            <h3>AI-Based Underwater Fish Detection &amp; Population Estimation</h3>
+            <span class="tl-date">Ongoing</span>
+          </div>
+          <p class="tl-org">Intern · NITTTR</p>
+          <p class="tl-desc">
+            Built a fish detection &amp; tracking pipeline covering a turbid
+            aquaculture tank and a coral reef environment. Extracted frames
+            from raw video, annotated datasets, trained a custom YOLOv11
+            model, and integrated BoT-SORT tracking for population counting.
+          </p>
+          <ul class="tl-tags">
+            <li>YOLOv11</li>
+            <li>OpenCV</li>
+            <li>Roboflow</li>
+            <li>BoT-SORT</li>
+            <li>Google Colab</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="tl-item">
+        <div class="tl-marker"></div>
+        <div class="tl-content">
+          <div class="tl-top">
+            <h3>Protospark — Barcode Based Digital Campus Management System</h3>
+            <span class="tl-date">College Event Project</span>
+          </div>
+          <p class="tl-org">Curious Freaks — Team Project</p>
+          <p class="tl-desc">
+            Designed and built a multi-page frontend for a barcode-based
+            campus management concept, deployed on GitHub Pages, covering
+            attendance, access, and record workflows for a college event.
+          </p>
+          <ul class="tl-tags">
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>GitHub Pages</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- duplicate .tl-item blocks above to add more experience entries -->
+
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION + SKILLS ================= -->
+  <section id="education" class="section wrap">
+    <div class="section-head">
+      <p class="eyebrow">02 &nbsp;·&nbsp; background</p>
+      <h2>Education &amp; Skills</h2>
+    </div>
+
+    <div class="edu-skills-grid">
+      <div class="edu-card">
+        <h3>Education</h3>
+        <div class="edu-entry">
+          <div class="edu-top">
+            <strong>B.Tech, Information Technology</strong>
+            <span>2024 – 2028</span>
+          </div>
+          <p>Velammal Institute of Technology</p>
+          <p class="edu-score">3rd Year · CGPA 8.79</p>
+        </div>
+        <!-- duplicate .edu-entry for schooling / other degrees -->
+        <div class="edu-entry">
+          <div class="edu-top">
+            <strong>Higher Secondary (12th)</strong>
+            <span>2022 – 2024</span>
+          </div>
+          <p>Velammal Vidhyashram Surapet, Tamil Nadu</p>
+          <p class="edu-score">82%</p>
+        </div>
+        <div class="edu-entry">
+          <div class="edu-top">
+            <strong>SSLC (10th)</strong>
+            <span>2021 – 2022</span>
+          </div>
+          <p>Velammal Vidhyashram Surapet, Tamil Nadu</p>
+          <p class="edu-score">88%</p>
+        </div>
+      </div>
+
+      <div class="skills-card">
+        <h3>Skills</h3>
+        <div class="skill-group">
+          <p class="skill-label">Languages &amp; Core</p>
+          <div class="chips">
+            <span>Python</span><span>HTML</span><span>CSS</span>
+            <span>JavaScript</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Computer Vision / ML</p>
+          <div class="chips">
+            <span>OpenCV</span><span>YOLOv11</span><span>Roboflow</span>
+            <span>Supervision</span><span>Google Colab</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Tools</p>
+          <div class="chips">
+            <span>Git</span><span>GitHub</span><span>LaTeX</span>
+            <span>GitHub Pages</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS (websites + code) ================= -->
+  <section id="projects" class="section wrap">
+    <div class="section-head">
+      <p class="eyebrow">03 &nbsp;·&nbsp; projects</p>
+      <h2>Websites &amp; Code</h2>
+      <p class="section-sub">Click a project to view the live site or the source.</p>
+    </div>
+
+    <div class="card-grid" id="projectGrid">
+      <!-- Each card: data-title / data-view / data-code -->
+      <article class="tile" tabindex="0"
+        data-title="Protospark — Campus Management System"
+        data-view=" https://kaviya030107.github.io/digital-campus-management-system/"
+        data-code="https://github.com/Kaviya030107/digital-campus-management-system">
+        <div class="tile-glow"></div>
+        <h3>Protospark</h3>
+        <p>Barcode-based digital campus management concept.</p>
+        <span class="tile-hint">click to open ↗</span>
+      </article>
+
+      <article class="tile" tabindex="0"
+        data-title="Fish Detection Demo"
+        data-view="https://your-username.github.io/fish-detection/"
+        data-code="https://github.com/your-username/fish-detection">
+        <div class="tile-glow"></div>
+        <h3>Fish Detection Demo</h3>
+        <p>YOLOv11-based underwater detection &amp; counting.</p>
+        <span class="tile-hint">click to open ↗</span>
+      </article>
+
+      <article class="tile" tabindex="0"
+        data-title="Tribal India"
+        data-view="https://kaviya030107.github.io/first-project/"
+        data-code="https://github.com/Kaviya030107/first-project">
+        <div class="tile-glow"></div>
+        <h3>Tribal India</h3>
+        <p>A E-commerce to sell tribal products </p>
+        <span class="tile-hint">click to open ↗</span>
+      </article>
+
+      <article class="tile" tabindex="0"
+        data-title="Dhaara"
+        data-view=" https://kaviya030107.github.io/Dhaara/"
+        data-code="https://github.com/Kaviya030107/Dhaara/">
+        <div class="tile-glow"></div>
+        <h3>Dhaara</h3>
+        <p>A E commerce to sell woman products</p>
+        <span class="tile-hint">click to open ↗</span>
+      </article>
+
+      <!-- duplicate .tile articles to add more projects -->
+    </div>
+  </section>
+
+  <!-- ================= PAPERS PUBLISHED ================= -->
+  <section id="papers" class="section wrap">
+    <div class="section-head">
+      <p class="eyebrow">04 &nbsp;·&nbsp; research</p>
+      <h2>Papers Published</h2>
+      <p class="section-sub">Click a paper to view it or the accompanying code.</p>
+    </div>
+ 
+    <div class="card-grid" id="paperGrid">
+      
+ 
+      <article class="tile tile-paper" tabindex="0"
+        data-title="Paper Title Here"
+        data-view="https://aclanthology.org/2026.dravidianlangtech-1.69/">
+        <div class="tile-glow"></div>
+        <h3>Paper Title Here</h3>
+        <p class="tile-venue">ACL 2026 · 6th Workshop on Speech, Vision and Language Technologies for Dravidian Languages</p>
+        <p>DravidianLangTech2026: Prompting and LoRA Adaptation for Tamil Abusive Language Detection - A Comparative Study of Open LLMs</p>
+        <span class="tile-hint">click to open ↗</span>
+      </article>
+
+      
+ 
+      <!-- duplicate .tile-paper articles to add more papers -->
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATES ================= -->
+  <section id="certificates" class="section wrap">
+    <div class="section-head">
+      <p class="eyebrow">05 &nbsp;·&nbsp; credentials</p>
+      <h2>Certificates</h2>
+    </div>
+
+    <div class="cert-grid">
+       <a class="cert-card" href="Infosys_ basics.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Basics to Python</span>
+        <span class="cert-issuer">Infosys · 2024</span>
+      </a>
+      <a class="cert-card" href="infosys1.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Introduction to Python</span>
+        <span class="cert-issuer">Infosys · 2024</span>
+      </a>
+      <a class="cert-card" href="infosys2.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Programming Fundamentals using Python - Part 1</span>
+        <span class="cert-issuer">Infosys · 2025</span>
+      </a>
+      <a class="cert-card" href="infosys3.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Programming Fundamentals using Python - Part 2</span>
+        <span class="cert-issuer">Infosys · 2025</span>
+      </a>
+      <a class="cert-card" href="infosys4.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Object Oriented Programming using Python</span>
+        <span class="cert-issuer">Infosys · 2025</span>
+      </a>
+      <a class="cert-card" href="project.jpg" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">National Level Project Competition</span>
+        <span class="cert-issuer">Velammal Research and Development cell · 2025</span>
+      </a>
+      <a class="cert-card" href="IA Online Training Certificate.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">IA Training Foundation Level</span>
+        <span class="cert-issuer">Innovation cell & AICTE · 2025</span>
+      </a>
+      <a class="cert-card" href="acm.jpg" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Deep Structured - Big "O"  Challenge</span>
+        <span class="cert-issuer">ACM · 2025</span>
+      </a>
+      <a class="cert-card" href="c.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Programming in C</span>
+        <span class="cert-issuer">Infosys · 2025</span>
+      </a>
+      <a class="cert-card" href="codebyk.jpg" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">The Hour Of Code</span>
+        <span class="cert-issuer">code.org · 2025</span>
+      </a>
+      <a class="cert-card" href="IA Participation Certificate-2.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">IA Training Advanced Level</span>
+        <span class="cert-issuer">Innovation cell & AICTE · 2025</span>
+      </a>
+      <a class="cert-card" href="IBM certificate.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Python 101 for Data Science</span>
+        <span class="cert-issuer">IBM · 2025</span>
+      </a>
+      <a class="cert-card" href="sa.jpg" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Project Presentation - Runner Up</span>
+        <span class="cert-issuer">S.A College · 2025</span>
+      </a>
+      <a class="cert-card" href="internpe.png" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Web Development Internship </span>
+        <span class="cert-issuer">Internpe · 2025</span>
+      </a>
+      <a class="cert-card" href="NM_Certificate.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Digital Skills</span>
+        <span class="cert-issuer">Naan Mudhalvan · 2025</span>
+      </a>
+      <a class="cert-card" href="Programming, Data Structures and Algorithms using Python.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Programming, Data Structures and Algorithms using Python</span>
+        <span class="cert-issuer">NPTEL · 2025</span>
+      </a>
+        <a class="cert-card" href="NM_Certificate (1).pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Foundation Skills For Employability</span>
+        <span class="cert-issuer">Naan Mudhalvan  · 2026</span>
+      </a>
+
+      <!-- duplicate .cert-card anchors to add more certificates -->
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> Kaviya. Built from scratch.</p>
+    <div class="footer-links">
+      <a href="mailto:np.kaviya0301@gmail.com">Email</a>
+      <a href="https://github.com/Kaviya030107" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/kaviya-n-5709b5343/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SHARED MODAL (used by Projects + Papers) ================= -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-panel">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <p class="modal-eyebrow">selected work</p>
+    <h3 id="modalTitle">Project Title</h3>
+    <div class="modal-actions">
+      <a id="modalView" class="btn btn-primary" target="_blank" rel="noopener">View Live ↗</a>
+      <a id="modalCode" class="btn btn-ghost" target="_blank" rel="noopener">View Code ↗</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
