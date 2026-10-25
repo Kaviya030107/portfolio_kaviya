@@ -44,7 +44,6 @@ body{
 
 a{color:inherit; text-decoration:none;}
 
-/* subtle ambient depth glow behind entire page */
 .depth-field{
   position:fixed; inset:0; z-index:-1;
   background:
@@ -120,6 +119,17 @@ a{color:inherit; text-decoration:none;}
 .hero-desc{ color:var(--text-mid); max-width:46ch; margin:0 0 30px; }
 .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
 
+/* hero highlight strip */
+.hl-strip{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 28px; }
+.hl-chip{
+  display:inline-flex; gap:8px; align-items:baseline;
+  font-size:.8rem; color:var(--text-mid);
+  background:var(--panel); border:1px solid var(--panel-line);
+  padding:7px 14px; border-radius:999px;
+}
+.hl-chip b{ color:var(--aqua); font-family:var(--font-mono); font-weight:500; }
+.hl-chip:hover{ border-color:var(--aqua); }
+
 .btn{
   display:inline-flex; align-items:center; gap:8px;
   padding:.85rem 1.4rem; border-radius:999px; font-weight:600; font-size:.92rem;
@@ -138,7 +148,7 @@ a{color:inherit; text-decoration:none;}
   overflow:hidden; background:var(--panel); border:1px solid var(--panel-line);
   box-shadow:0 30px 60px rgba(0,0,0,.45);
 }
-.portrait-frame img{ width:100%; height: 400px;; object-fit:cover; display:block; }
+.portrait-frame img{ width:100%; height: 400px; object-fit:cover; display:block; }
 .portrait-tag{
   position:absolute; bottom:-14px; left:50%; transform:translateX(-50%);
   background:var(--depth-2); border:1px solid var(--panel-line);
@@ -150,6 +160,7 @@ a{color:inherit; text-decoration:none;}
   .hero-grid{ grid-template-columns:1fr; text-align:center; }
   .hero-desc{ margin-inline:auto; }
   .hero-actions{ justify-content:center; }
+  .hl-strip{ justify-content:center; }
 }
 
 /* ============================================================
@@ -181,12 +192,18 @@ a{color:inherit; text-decoration:none;}
 .tl-top h3{ font-family:var(--font-display); font-size:1.1rem; margin:0; }
 .tl-date{ font-family:var(--font-mono); font-size:.76rem; color:var(--text-dim); white-space:nowrap; }
 .tl-org{ color:var(--aqua); font-size:.88rem; margin:6px 0 10px; font-weight:500; }
+.tl-mentor{ color:var(--text-dim); font-size:.85rem; margin:-4px 0 10px; }
 .tl-desc{ color:var(--text-mid); max-width:70ch; margin:0 0 14px; font-size:.95rem; }
 .tl-tags{ list-style:none; display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; }
 .tl-tags li{
   font-family:var(--font-mono); font-size:.72rem; color:var(--text-mid);
   border:1px solid var(--panel-line); padding:4px 10px; border-radius:999px;
 }
+.tl-link{
+  display:inline-block; margin-top:14px;
+  font-family:var(--font-mono); font-size:.76rem; color:var(--aqua);
+}
+.tl-link:hover{ text-decoration:underline; }
 
 /* ============================================================
    EDUCATION + SKILLS
@@ -257,6 +274,36 @@ a{color:inherit; text-decoration:none;}
 
 @media(max-width:900px){ .card-grid{ grid-template-columns:1fr 1fr; } }
 @media(max-width:600px){ .card-grid{ grid-template-columns:1fr; } }
+
+/* featured paper */
+.paper-feature{ padding:32px; }
+.paper-feature h3{ font-size:1.25rem; line-height:1.35; margin:14px 0 10px; }
+.paper-badges{ display:flex; flex-wrap:wrap; gap:10px; }
+.badge{
+  font-family:var(--font-mono); font-size:.72rem;
+  padding:5px 12px; border-radius:999px; border:1px solid;
+}
+.badge-aqua{ color:var(--aqua); border-color:rgba(61,218,215,.4); background:var(--aqua-dim); }
+.badge-coral{ color:var(--coral); border-color:rgba(255,143,107,.4); background:rgba(255,143,107,.1); }
+.paper-authors{ font-size:.82rem !important; color:var(--text-dim) !important; }
+.paper-authors b{ color:var(--text-hi); font-weight:600; }
+
+/* ============================================================
+   ACHIEVEMENTS
+============================================================ */
+.feature-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:28px;
+}
+.feature-card{
+  background:var(--panel); border:1px solid rgba(255,143,107,.3);
+  border-radius:var(--radius-lg); padding:26px;
+  box-shadow:0 0 0 1px rgba(255,143,107,.04), 0 18px 40px rgba(0,0,0,.28);
+}
+.feature-icon{ font-size:1.6rem; display:block; margin-bottom:12px; }
+.feature-card h3{ font-family:var(--font-display); font-size:1.05rem; margin:0 0 8px; }
+.feature-card p{ color:var(--text-mid); font-size:.9rem; margin:0; }
+@media(max-width:900px){ .feature-grid{ grid-template-columns:1fr; } }
+
 .achieve-list{
   list-style:none; margin:0; padding:0;
   display:flex; flex-direction:column; gap:12px;
@@ -270,9 +317,18 @@ a{color:inherit; text-decoration:none;}
   flex-shrink:0; font-size:1rem; line-height:1.4; color:var(--coral);
 }
 .achieve-text{ color:var(--text-mid); font-size:.95rem; line-height:1.5; }
+
 /* ============================================================
    CERTIFICATES
 ============================================================ */
+.year-label{
+  font-family:var(--font-mono); font-weight:500; font-size:.95rem;
+  color:var(--coral); margin:36px 0 14px;
+  display:flex; align-items:center; gap:14px;
+}
+.year-label:first-of-type{ margin-top:0; }
+.year-label::after{ content:""; flex:1; height:1px; background:var(--panel-line); }
+
 .cert-grid{
   display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
 }
