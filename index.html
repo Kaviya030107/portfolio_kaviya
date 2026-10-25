@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Kaviya — Portfolio</title>
-<meta name="description" content="Portfolio of Kaviya — IT undergrad, computer vision & full-stack projects." />
+<meta name="description" content="Portfolio of Kaviya — IT undergrad, ACL 2026 published researcher, computer vision & full-stack projects." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
 </head>
 <body>
 
-<!-- ambient depth gradient backdrop -->
 <div class="depth-field" aria-hidden="true"></div>
 
 <header class="nav">
@@ -23,6 +22,7 @@
       <a href="#education">Education</a>
       <a href="#projects">Projects</a>
       <a href="#papers">Papers</a>
+      <a href="#achievements">Achievements</a>
       <a href="#certificates">Certificates</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -37,15 +37,23 @@
   <section class="hero wrap">
     <div class="hero-grid">
       <div class="hero-copy">
+        <p class="eyebrow">// undergraduate &nbsp;·&nbsp; computer vision &amp; web dev</p>
         <h1 class="hero-name">Kaviya N</h1>
-        <h2 class="hero-role">B.Tech Information Technology</h2>
+        <h2 class="hero-role">Computer Vision &amp; Full‑Stack Developer</h2>
         <p class="hero-desc">
-          Exploring the depths of vision, language, and interface
+          I build systems that make sense of images, from underwater detection
+          pipelines to campus-scale web apps. Published at ACL 2026 and a
+          research intern at NITTTR Chennai.
         </p>
+
+        <div class="hl-strip">
+          <a class="hl-chip" href="#papers"><b>ACL 2026</b> Published</a>
+          <a class="hl-chip" href="#papers"><b>12th of 22</b> Shared Task</a>
+          <a class="hl-chip" href="#experience"><b>NITTTR</b> Research Intern</a>
+        </div>
+
         <div class="hero-actions">
-          <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">
-            View Resume
-          </a>
+          <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
           <a class="btn btn-ghost" href="#projects">See Work ↓</a>
         </div>
       </div>
@@ -72,10 +80,11 @@
         <div class="tl-marker"></div>
         <div class="tl-content">
           <div class="tl-top">
-            <h3>AI-Based Underwater Fish Detection &amp; Population Estimation</h3>
-            <span class="tl-date">Ongoing</span>
+            <h3>Comparative Performance Analysis of YOLO Models for Underwater Fish Detection</h3>
+            <span class="tl-date">Jun – Jul 2026</span>
           </div>
-          <p class="tl-org">Intern · NITTTR</p>
+          <p class="tl-org">Research Intern · NITTTR Chennai (Ministry of Education, Govt. of India)</p>
+          <p class="tl-mentor">Mentor: Dr. S. Sakthivel Murugan, Professor, Dept. of ECE</p>
           <p class="tl-desc">
             Built a fish detection &amp; tracking pipeline covering a turbid
             aquaculture tank and a coral reef environment. Extracted frames
@@ -89,31 +98,9 @@
             <li>BoT-SORT</li>
             <li>Google Colab</li>
           </ul>
+          <a class="tl-link" href="nitttr.pdf" target="_blank" rel="noopener">View internship certificate ↗</a>
         </div>
       </article>
-
-      <article class="tl-item">
-        <div class="tl-marker"></div>
-        <div class="tl-content">
-          <div class="tl-top">
-            <h3>Protospark — Barcode Based Digital Campus Management System</h3>
-            <span class="tl-date">College Event Project</span>
-          </div>
-          <p class="tl-org">Curious Freaks — Team Project</p>
-          <p class="tl-desc">
-            Designed and built a multi-page frontend for a barcode-based
-            campus management concept, deployed on GitHub Pages, covering
-            attendance, access, and record workflows for a college event.
-          </p>
-          <ul class="tl-tags">
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-            <li>GitHub Pages</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- duplicate .tl-item blocks above to add more experience entries -->
 
     </div>
   </section>
@@ -136,7 +123,6 @@
           <p>Velammal Institute of Technology</p>
           <p class="edu-score">3rd Year · CGPA 8.79</p>
         </div>
-        <!-- duplicate .edu-entry for schooling / other degrees -->
         <div class="edu-entry">
           <div class="edu-top">
             <strong>Higher Secondary (12th)</strong>
@@ -165,10 +151,10 @@
           </div>
         </div>
         <div class="skill-group">
-          <p class="skill-label">Computer Vision / ML</p>
+          <p class="skill-label">Computer Vision / ML / NLP</p>
           <div class="chips">
             <span>OpenCV</span><span>YOLOv11</span><span>Roboflow</span>
-            <span>Supervision</span><span>Google Colab</span>
+            <span>Supervision</span><span>LLMs</span><span>LoRA</span><span>Google Colab</span>
           </div>
         </div>
         <div class="skill-group">
@@ -182,7 +168,7 @@
     </div>
   </section>
 
-  <!-- ================= PROJECTS (websites + code) ================= -->
+  <!-- ================= PROJECTS ================= -->
   <section id="projects" class="section wrap">
     <div class="section-head">
       <p class="eyebrow">03 &nbsp;·&nbsp; projects</p>
@@ -191,10 +177,9 @@
     </div>
 
     <div class="card-grid" id="projectGrid">
-      <!-- Each card: data-title / data-view / data-code -->
       <article class="tile" tabindex="0"
         data-title="Protospark — Campus Management System"
-        data-view=" https://kaviya030107.github.io/digital-campus-management-system/"
+        data-view="https://kaviya030107.github.io/digital-campus-management-system/"
         data-code="https://github.com/Kaviya030107/digital-campus-management-system">
         <div class="tile-glow"></div>
         <h3>Protospark</h3>
@@ -204,8 +189,8 @@
 
       <article class="tile" tabindex="0"
         data-title="Fish Detection Demo"
-        data-view="https://your-username.github.io/fish-detection/"
-        data-code="https://github.com/your-username/fish-detection">
+        data-view="output.mp4"
+        data-label="View Video ↗">
         <div class="tile-glow"></div>
         <h3>Fish Detection Demo</h3>
         <p>YOLOv11-based underwater detection &amp; counting.</p>
@@ -218,60 +203,79 @@
         data-code="https://github.com/Kaviya030107/first-project">
         <div class="tile-glow"></div>
         <h3>Tribal India</h3>
-        <p>A E-commerce to sell tribal products </p>
+        <p>An e-commerce site to sell tribal products.</p>
         <span class="tile-hint">click to open ↗</span>
       </article>
 
       <article class="tile" tabindex="0"
         data-title="Dhaara"
-        data-view=" https://kaviya030107.github.io/Dhaara/"
+        data-view="https://kaviya030107.github.io/Dhaara/"
         data-code="https://github.com/Kaviya030107/Dhaara/">
         <div class="tile-glow"></div>
         <h3>Dhaara</h3>
-        <p>A E commerce to sell woman products</p>
+        <p>An e-commerce site to sell women's products.</p>
         <span class="tile-hint">click to open ↗</span>
       </article>
-
-      <!-- duplicate .tile articles to add more projects -->
     </div>
   </section>
 
-  <!-- ================= PAPERS PUBLISHED ================= -->
+  <!-- ================= PAPERS ================= -->
   <section id="papers" class="section wrap">
     <div class="section-head">
       <p class="eyebrow">04 &nbsp;·&nbsp; research</p>
       <h2>Papers Published</h2>
-      <p class="section-sub">Click a paper to view it or the accompanying code.</p>
+      <p class="section-sub">Click the paper to open it on the ACL Anthology.</p>
     </div>
- 
-    <div class="card-grid" id="paperGrid">
-      
- 
-      <article class="tile tile-paper" tabindex="0"
-        data-title="Paper Title Here"
-        data-view="https://aclanthology.org/2026.dravidianlangtech-1.69/">
-        <div class="tile-glow"></div>
-        <h3>Paper Title Here</h3>
-        <p class="tile-venue">ACL 2026 · 6th Workshop on Speech, Vision and Language Technologies for Dravidian Languages</p>
-        <p>DravidianLangTech2026: Prompting and LoRA Adaptation for Tamil Abusive Language Detection - A Comparative Study of Open LLMs</p>
-        <span class="tile-hint">click to open ↗</span>
-      </article>
 
-      
- 
-      <!-- duplicate .tile-paper articles to add more papers -->
-    </div>
+    <article class="paper-feature tile" tabindex="0"
+      data-title="VITECH@DravidianLangTech2026: Prompting and LoRA Adaptation for Tamil Abusive Language Detection"
+      data-view="https://aclanthology.org/2026.dravidianlangtech-1.69/">
+      <div class="tile-glow"></div>
+      <div class="paper-badges">
+        <span class="badge badge-aqua">Published · ACL Anthology 2026</span>
+        <span class="badge badge-coral">🏅 Ranked 12th of 22 submissions · F1 0.7959</span>
+      </div>
+      <h3>VITECH@DravidianLangTech2026: Prompting and LoRA Adaptation for Tamil Abusive Language Detection — A Comparative Study of Open LLMs</h3>
+      <p class="tile-venue">6th Workshop on Speech, Vision, and Language Technologies for Dravidian Languages · ACL, July 2026 · pp. 436–441</p>
+      <p>
+        Compared four open LLM families (Gemma, LLaMA, Qwen, DeepSeek-Distilled) at ~2B and 8B
+        sizes for Tamil abusive language detection, using zero-shot, few-shot and LoRA fine-tuning.
+        LoRA clearly beat prompting, and Gemma-2-9B + LoRA performed best.
+      </p>
+      <p class="paper-authors">Triambiga Krubhakaran, Senthil Kumar B, <b>Kaviya Nagarajan</b>, Balaji N</p>
+      <span class="tile-hint">click to open ↗</span>
+    </article>
   </section>
+
+  <!-- ================= ACHIEVEMENTS ================= -->
   <section id="achievements" class="section wrap">
     <div class="section-head">
       <p class="eyebrow">05 &nbsp;·&nbsp; recognition</p>
       <h2>Achievements</h2>
     </div>
- 
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-icon">🏅</span>
+        <h3>Published at ACL 2026 · Ranked 12th of 22</h3>
+        <p>Research paper on Tamil abusive language detection published in the ACL Anthology, placing 12th among 22 submissions in the DravidianLangTech shared task (F1 0.7959).</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">🔬</span>
+        <h3>Research Intern, NITTTR Chennai</h3>
+        <p>Completed a research internship under the Ministry of Education institute, comparing YOLO models for underwater fish detection and population counting.</p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-icon">🏆</span>
+        <h3>1st Prize · National Project Presentation</h3>
+        <p>Won first prize in a college-level national project presentation competition.</p>
+      </article>
+    </div>
+
     <ul class="achieve-list">
       <li class="achieve-item">
-        <span class="achieve-icon">🏆</span>
-        <span class="achieve-text">Won 1st Prize in a College-level National Project Presentation</span>
+        <span class="achieve-icon">◆</span>
+        <span class="achieve-text">Attended ACL 2026, the 64th Annual Meeting of the Association for Computational Linguistics, San Diego, USA</span>
       </li>
       <li class="achieve-item">
         <span class="achieve-icon">◆</span>
@@ -289,35 +293,85 @@
         <span class="achieve-icon">◆</span>
         <span class="achieve-text">Completed NPTEL course on Data Structures and Algorithms using Python</span>
       </li>
-      <!-- duplicate .achieve-item to add more achievements -->
     </ul>
   </section>
-  <!-- ================= CERTIFICATES ================= -->
+
+  <!-- ================= CERTIFICATES (latest first) ================= -->
   <section id="certificates" class="section wrap">
     <div class="section-head">
       <p class="eyebrow">06 &nbsp;·&nbsp; credentials</p>
       <h2>Certificates</h2>
     </div>
 
+    <h3 class="year-label">2026</h3>
     <div class="cert-grid">
-       <a class="cert-card" href="Infosys_ basics.pdf" target="_blank" rel="noopener">
+      <a class="cert-card" href="nitttr.pdf" target="_blank" rel="noopener">
         <span class="cert-icon">◆</span>
-        <span class="cert-title">Basics to Python</span>
-        <span class="cert-issuer">Infosys · 2024</span>
+        <span class="cert-title">Certificate of Internship</span>
+        <span class="cert-issuer">NITTTR Chennai · Sep 2026</span>
       </a>
-      <a class="cert-card" href="infosys1.pdf" target="_blank" rel="noopener">
+      <a class="cert-card" href="acl_attendance.pdf" target="_blank" rel="noopener">
         <span class="cert-icon">◆</span>
-        <span class="cert-title">Introduction to Python</span>
-        <span class="cert-issuer">Infosys · 2024</span>
+        <span class="cert-title">ACL 2026 Attendance Letter</span>
+        <span class="cert-issuer">Association for Computational Linguistics · Jul 2026</span>
       </a>
-      <a class="cert-card" href="infosys2.pdf" target="_blank" rel="noopener">
+      <a class="cert-card" href="NM_Certificate (1).pdf" target="_blank" rel="noopener">
         <span class="cert-icon">◆</span>
-        <span class="cert-title">Programming Fundamentals using Python - Part 1</span>
-        <span class="cert-issuer">Infosys · 2025</span>
+        <span class="cert-title">Foundation Skills For Employability</span>
+        <span class="cert-issuer">Naan Mudhalvan · 2026</span>
       </a>
-      <a class="cert-card" href="infosys3.pdf" target="_blank" rel="noopener">
+    </div>
+
+    <h3 class="year-label">2025</h3>
+    <div class="cert-grid">
+      <a class="cert-card" href="acm.jpg" target="_blank" rel="noopener">
         <span class="cert-icon">◆</span>
-        <span class="cert-title">Programming Fundamentals using Python - Part 2</span>
+        <span class="cert-title">Deep Structured - Big "O" Challenge</span>
+        <span class="cert-issuer">ACM · 2025</span>
+      </a>
+      <a class="cert-card" href="project.jpg" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">National Level Project Competition</span>
+        <span class="cert-issuer">Velammal Research and Development cell · 2025</span>
+      </a>
+      <a class="cert-card" href="sa.jpg" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Project Presentation - Runner Up</span>
+        <span class="cert-issuer">S.A College · 2025</span>
+      </a>
+      <a class="cert-card" href="Programming, Data Structures and Algorithms using Python.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Programming, Data Structures and Algorithms using Python</span>
+        <span class="cert-issuer">NPTEL · 2025</span>
+      </a>
+      <a class="cert-card" href="IBM certificate.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Python 101 for Data Science</span>
+        <span class="cert-issuer">IBM · 2025</span>
+      </a>
+      <a class="cert-card" href="NM_Certificate.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Digital Skills</span>
+        <span class="cert-issuer">Naan Mudhalvan · 2025</span>
+      </a>
+      <a class="cert-card" href="internpe.png" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Web Development Internship</span>
+        <span class="cert-issuer">Internpe · 2025</span>
+      </a>
+      <a class="cert-card" href="IA Participation Certificate-2.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">IA Training Advanced Level</span>
+        <span class="cert-issuer">Innovation cell &amp; AICTE · 2025</span>
+      </a>
+      <a class="cert-card" href="IA Online Training Certificate.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">IA Training Foundation Level</span>
+        <span class="cert-issuer">Innovation cell &amp; AICTE · 2025</span>
+      </a>
+      <a class="cert-card" href="c.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Programming in C</span>
         <span class="cert-issuer">Infosys · 2025</span>
       </a>
       <a class="cert-card" href="infosys4.pdf" target="_blank" rel="noopener">
@@ -325,24 +379,14 @@
         <span class="cert-title">Object Oriented Programming using Python</span>
         <span class="cert-issuer">Infosys · 2025</span>
       </a>
-      <a class="cert-card" href="project.jpg" target="_blank" rel="noopener">
+      <a class="cert-card" href="infosys3.pdf" target="_blank" rel="noopener">
         <span class="cert-icon">◆</span>
-        <span class="cert-title">National Level Project Competition</span>
-        <span class="cert-issuer">Velammal Research and Development cell · 2025</span>
+        <span class="cert-title">Programming Fundamentals using Python - Part 2</span>
+        <span class="cert-issuer">Infosys · 2025</span>
       </a>
-      <a class="cert-card" href="IA Online Training Certificate.pdf" target="_blank" rel="noopener">
+      <a class="cert-card" href="infosys2.pdf" target="_blank" rel="noopener">
         <span class="cert-icon">◆</span>
-        <span class="cert-title">IA Training Foundation Level</span>
-        <span class="cert-issuer">Innovation cell & AICTE · 2025</span>
-      </a>
-      <a class="cert-card" href="acm.jpg" target="_blank" rel="noopener">
-        <span class="cert-icon">◆</span>
-        <span class="cert-title">Deep Structured - Big "O"  Challenge</span>
-        <span class="cert-issuer">ACM · 2025</span>
-      </a>
-      <a class="cert-card" href="c.pdf" target="_blank" rel="noopener">
-        <span class="cert-icon">◆</span>
-        <span class="cert-title">Programming in C</span>
+        <span class="cert-title">Programming Fundamentals using Python - Part 1</span>
         <span class="cert-issuer">Infosys · 2025</span>
       </a>
       <a class="cert-card" href="codebyk.jpg" target="_blank" rel="noopener">
@@ -350,43 +394,20 @@
         <span class="cert-title">The Hour Of Code</span>
         <span class="cert-issuer">code.org · 2025</span>
       </a>
-      <a class="cert-card" href="IA Participation Certificate-2.pdf" target="_blank" rel="noopener">
-        <span class="cert-icon">◆</span>
-        <span class="cert-title">IA Training Advanced Level</span>
-        <span class="cert-issuer">Innovation cell & AICTE · 2025</span>
-      </a>
-      <a class="cert-card" href="IBM certificate.pdf" target="_blank" rel="noopener">
-        <span class="cert-icon">◆</span>
-        <span class="cert-title">Python 101 for Data Science</span>
-        <span class="cert-issuer">IBM · 2025</span>
-      </a>
-      <a class="cert-card" href="sa.jpg" target="_blank" rel="noopener">
-        <span class="cert-icon">◆</span>
-        <span class="cert-title">Project Presentation - Runner Up</span>
-        <span class="cert-issuer">S.A College · 2025</span>
-      </a>
-      <a class="cert-card" href="internpe.png" target="_blank" rel="noopener">
-        <span class="cert-icon">◆</span>
-        <span class="cert-title">Web Development Internship </span>
-        <span class="cert-issuer">Internpe · 2025</span>
-      </a>
-      <a class="cert-card" href="NM_Certificate.pdf" target="_blank" rel="noopener">
-        <span class="cert-icon">◆</span>
-        <span class="cert-title">Digital Skills</span>
-        <span class="cert-issuer">Naan Mudhalvan · 2025</span>
-      </a>
-      <a class="cert-card" href="Programming, Data Structures and Algorithms using Python.pdf" target="_blank" rel="noopener">
-        <span class="cert-icon">◆</span>
-        <span class="cert-title">Programming, Data Structures and Algorithms using Python</span>
-        <span class="cert-issuer">NPTEL · 2025</span>
-      </a>
-        <a class="cert-card" href="NM_Certificate (1).pdf" target="_blank" rel="noopener">
-        <span class="cert-icon">◆</span>
-        <span class="cert-title">Foundation Skills For Employability</span>
-        <span class="cert-issuer">Naan Mudhalvan  · 2026</span>
-      </a>
+    </div>
 
-      <!-- duplicate .cert-card anchors to add more certificates -->
+    <h3 class="year-label">2024</h3>
+    <div class="cert-grid">
+      <a class="cert-card" href="infosys1.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Introduction to Python</span>
+        <span class="cert-issuer">Infosys · 2024</span>
+      </a>
+      <a class="cert-card" href="Infosys_ basics.pdf" target="_blank" rel="noopener">
+        <span class="cert-icon">◆</span>
+        <span class="cert-title">Basics to Python</span>
+        <span class="cert-issuer">Infosys · 2024</span>
+      </a>
     </div>
   </section>
 
@@ -403,7 +424,6 @@
   </div>
 </footer>
 
-<!-- ================= SHARED MODAL (used by Projects + Papers) ================= -->
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal-panel">
     <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
