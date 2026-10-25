@@ -19,16 +19,15 @@ const modalView = document.getElementById('modalView');
 const modalCode = document.getElementById('modalCode');
 const modalClose = document.getElementById('modalClose');
 
-function openModal(title, viewLink, codeLink){
+function openModal(title, viewLink, codeLink, label){
   modalTitle.textContent = title;
   modalView.href = viewLink;
+  modalView.textContent = label || (codeLink ? 'View Live ↗' : 'View Paper ↗');
 
   if (codeLink) {
-    modalView.textContent = 'View Live ↗';
     modalCode.href = codeLink;
     modalCode.style.display = '';
   } else {
-    modalView.textContent = 'View Paper ↗';
     modalCode.style.display = 'none';
   }
 
@@ -43,7 +42,8 @@ document.querySelectorAll('.tile').forEach(tile => {
   const trigger = () => openModal(
     tile.dataset.title,
     tile.dataset.view,
-    tile.dataset.code
+    tile.dataset.code,
+    tile.dataset.label
   );
   tile.addEventListener('click', trigger);
   tile.addEventListener('keydown', (e) => {
